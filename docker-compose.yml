@@ -1,0 +1,7 @@
+version: '2'
+
+services:
+  dst:
+    image: dstacademy/dontstarvetogether:latest
+    env_file:
+      - .env
