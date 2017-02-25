@@ -3,5 +3,11 @@ version: '2'
 services:
   dst:
     image: dstacademy/dontstarvetogether:latest
+    container_name: dst
+    tty: true
+    stdin_open: true
+    command: dst-server start --update=all
+    ports:
+      - "10999:10999/udp"
     env_file:
       - .env
